@@ -15,13 +15,13 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var correctPrompts = getPrompts(); 
+  var correctPrompts = getPrompts();
   var passwordText = document.querySelector("#password");
 
   if (correctPrompts) {
     var password = generatePassword();
     passwordText.value = password;
-  } 
+  }
   else {
     passwordText.vualue = "";
   }
@@ -48,18 +48,16 @@ function getPrompts() {
   }
   if (confirm("Would you like lowercase letters in your password")) {
     choiceArr = choiceArr.concat(lowerCassArr);
- }
+  }
   if (confirm("Would you like uppercase letters in your password")) {
     choiceArr = choiceArr.concat(upperCaseArr);
- } 
-  if (confirm("Would you like specia letters in your password")) {
+  }
+  if (confirm("Would you like special letters in your password")) {
     choiceArr = choiceArr.concat(specialCharArr);
-} 
-  if (confirm("Would you like lowercase letters in your password")) {
-    choiceArr = choiceArr.concat(lowerCassArr);
-} 
+  }
+
   if (confirm("Would you like numbers in your password")) {
     choiceArr = choiceArr.concat(numberArr);
- }
+  }
   return true;
 }
